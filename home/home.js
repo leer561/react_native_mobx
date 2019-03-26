@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import Counter from './components/counter'
 
 export default class Home extends Component{
 	render() {
 		return (
 			<View >
-				<Text>Welcome to home page</Text>
+				<Counter />
 			</View>
 		);
 	}
