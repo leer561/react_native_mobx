@@ -1,33 +1,51 @@
-export const color = {
+const colors = {
 
 	// 全局应用
-	primary: '#007bff',
+	primary: '#2e4770',
 	secondary: '#6c757d',
-	success: '#28a745 ',
-	info: '#17a2b8 ',
-	warning: '#ffc107 ',
-	danger: '#dc3545 ',
+	success: '#28a745',
+	info: '#17a2b8',
+	warning: '#ffc107',
+	error: '#dc3545',
 	light: '#f8f9fa',
-	dark: '#343a40 ',
+	dark: '#343a40',
+	searchBg: '#303337',
+	disabled: 'hsl(208, 8%, 90%)',
 
 	// 文本
+	grey0: '#393e42',
+	grey1: '#43484d',
+	grey2: '#5e6977',
+	grey3: '#86939e',
+	grey4: '#bdc6cf',
+	grey5: '#e1e8ee',
+	greyOutline: '#bbb',
 	white: '#fff',
-	gray100: '#f8f9fa',
-	gray200: '#e9ecef',
-	gray300: '#dee2e6',
-	gray400: '#ced4da',
-	gray500: '#adb5bd',
-	gray600: '#6c757d',
-	gray700: '#495057',
-	gray800: '#343a40',
-	gray900: '#212529',
-	black: '#000'
+	black: '#000',
 
-	// 自定义
+	// 平台
+	platform: {
+		ios: {
+			primary: '#2e4770',
+			secondary: '#6c757d',
+			success: '#28a745',
+			info: '#17a2b8',
+			warning: '#ffc107',
+			error: '#dc3545'
+		},
+		android: {
+			primary: '#2e4770',
+			secondary: '#6c757d',
+			success: '#28a745',
+			info: '#17a2b8',
+			warning: '#ffc107',
+			error: '#dc3545'
+		},
+	}
 
 }
 
-export const size = {
+const size = {
 	// 屏幕宽度
 
 
@@ -82,3 +100,4 @@ export const size = {
 	iconSizeLg: 36,
 
 }
+export {colors,size}

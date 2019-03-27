@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
+import {ThemeProvider,Button} from 'react-native-elements';
+import {colors} from "../../../style/variables";
 
-import {StyledButton} from "./style";
-
-export default class CustomButton  extends Component{
+export default class CustomButton extends Component {
 	render() {
 		return (
-			<StyledButton title="Learn More" />
+			<ThemeProvider theme={{colors}}>
+				<Button theme={{colors}} title="My Button"  />
+			</ThemeProvider>
 		);
 	}
 }
