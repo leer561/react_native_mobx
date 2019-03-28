@@ -6,7 +6,7 @@ export default class CustomButton extends Component {
 	render() {
 		return (
 			<ThemeProvider theme={{colors}}>
-				<Button theme={{colors}} title="My Button"  />
+				<Button theme={{colors}} {...this.props}  />
 			</ThemeProvider>
 		);
 	}

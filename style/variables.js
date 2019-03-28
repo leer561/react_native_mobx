@@ -81,9 +81,11 @@ const size = {
 	lineHeightParagraph: 1.5,    // 多行行高
 
 	// 水平间距
+	hSpacingXs: 3,
 	hSpacingSm: 5,
 	hSpacingBase: 8,
 	hSpacingLg: 15,
+	hSpacingXl: 21,
 
 	// 垂直间距
 	vSpacingXs: 3,
