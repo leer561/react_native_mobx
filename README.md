@@ -34,7 +34,7 @@
 
      目前顶级导航为Drawer navigation，然后是底部的Tab navigation，每个底部的Tab集成了Stack navigation，
      这样保证侧边栏滑出处于最顶部，
-    ![预览]("./assets/images/1.png" "预览")
+    ![预览]("https://github.com/leer561/react_native_mobx/blob/develop/src/assets/images/1.png" "预览")
     
     navigation并未与Mobx集成，React Navigation自行管理导航相关处理。
     
@@ -92,6 +92,8 @@
 - 多语言设置
 
 # 文件结构目录以及使用
+
+- 项目文件结构目录
 ```
 project
 │   index.js   IOS或Android的入口 
@@ -105,15 +107,62 @@ project
 |
 └───src     react native js 代码目录
     |───App.js      App入口组件以及drawer导航
+    |
     |───tab-navigation.js       底部导航文件
+    |
     |───assets      资源
-        |───images      图片
+    |       |
+    |       |───images      图片
+    |
     |───common      APP内公用文件，例如组件
-        |───components      公用组件文件夹
-    |───common      APP内公用文件，例如组件    
-        
+    |       |
+    |       |───components      公用组件文件夹
+    |    
+    |───drawer      侧边内容组件  
+    |
+    |───home        底部Tab Home页的组件文件
+    |       |
+    |       |───index.js        Home的入口文件，结合Stack navigation
+    |       |
+    |       |───home.js         Home的组件文件
+    |       |
+    |       |───components      Home内的组件文件
+    |
+    |───store        Mobx公共数据管理文件
+    |       |     
+    |       |───index.js        store的入口文件，融合子store，并且加入插件
+    |       |
+    |       |───counter.js      counter相关的数据，action等文件
+    |   
+    |───style        公用样式文件夹
+    |       |     
+    |       |───variables.js       定义公共样式的文件
+               
 ```
-       
+- 样式的使用
+     > 1。公共样式主要分为color与size两个部分，使用时引用即可，配合styled-components库，
+     使用时，如果样式较多，新建一个style.js文件分离出去，避免出现行数超大的组件文件。
+     使用变量可以方便的保持APP的风格统一与易于修改。
+
+     >2。react-native-elements组件可以通过ThemeProvider提供主题，ThemeProvider可以包裹多个组件，但是跨组件不可。
+     所以一些常用的可以象是common----component----button里简单封一下。
+     
+- Mobx的使用
+     > 1。主要使用Mobx来处理多页面共用数据的情况，例如home和侧滑页面公用的counter计数。
+     如果数据不公共，不需要放入Mobx，维持各个组件自治。
+     
+     > 2。Mobx生成方式就是单例模式，所以很容易修改数据，启用严格模式，
+     必须要通过action修改，否则容易引发混乱，后期难以调试。
+
+
+# 其他学习资料
+  
+  施工中   
+     
+     
+     
+     
+     
     
     
     
