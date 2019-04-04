@@ -14,7 +14,6 @@ export default class Counter extends Component{
 		super(props)
 		this.store = this.props.counterStore; //通过props来导入访问已注入的store
 	}
-
 	render() {
 		const { counter } = this.store;
 		return (

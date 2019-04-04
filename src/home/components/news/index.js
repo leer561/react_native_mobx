@@ -9,14 +9,13 @@ import {NewsWrapper,LoadingWrapper,CardWrapper,CardTitle,CardInfo,
 export default class News extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {isLoading: true,dataSource:[]}
+		this.state = {isLoading: true}
 	}
 
 	componentDidMount() {
 		fetch('https://www.v2ex.com/api/topics/hot.json')
 			.then((response) => response.json())
 			.then((responseJson) => {
-				console.log('responseJson', responseJson)
 				this.setState({
 					isLoading: false,
 					dataSource: responseJson
@@ -62,7 +61,6 @@ export default class News extends Component {
 						}}
 					/>
 				</View>
-
 			</NewsWrapper>
 		)
 	}
