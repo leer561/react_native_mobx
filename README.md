@@ -5,7 +5,7 @@
 - 集成的库
 - 尚未测试与集成的库
 - 文件结构目录以及使用
-- 其他学习资料
+- RN相关资料
 
 
 # 安装说明
@@ -151,17 +151,47 @@ project
      > 1。主要使用Mobx来处理多页面共用数据的情况，例如home和侧滑页面公用的counter计数。
      如果数据不公共，不需要放入Mobx，维持各个组件自治。
      
-     > 2。Mobx生成方式就是单例模式，所以很容易修改数据，启用严格模式，
+     > 2。Mobx生成方式就是单例模式，容易修改数据，所以目前启用严格模式，
      必须要通过action修改，否则容易引发混乱，后期难以调试。
 
-
-# 其他学习资料
+# RN相关资料
   
-  施工中   
+  - 1 RN环境搭建
+  
+    按照教程一般没什么问题
+    [中文搭建开发环境](https://reactnative.cn/docs/getting-started.html)
+    [英文官网教程](https://facebook.github.io/react-native/docs/getting-started)
+    
+    > 注意，配置环境变量后，要重新打开一个终端，配置不会在已打开的终端起作用,如果在IDE里打开的，则需要关闭再次打开IDE。
+    
+  - 2 RN开发相关
+    Hot Reload 和 Live Reload 按照 教程开启即可, [说明](https://reactnative.cn/docs/debugging/#%E8%87%AA%E5%8A%A8%E5%88%B7%E6%96%B0)
+    
+    不过，远程调试使用 [react-native-debugger](https://github.com/jhen0409/react-native-debugger) 更好一些。
+    同时需要注意一些更改必须要重新运行整个App项目才可以。
+    
+  - 3 RN组件以及样式
+    
+    参照 [RN中文网](https://reactnative.cn/docs/style/) 一步一步往下即可，但是要仔细阅读，因为虽与CSS类似，却也不同。
+    
+  
+    不过RN无法构建Web那样的样式体系，只能使用JS的方式进行公共变量的传递。
+    另外，使用 [styled-components](https://www.styled-components.com/docs/basics#react-native)，大部分情况下，可以按照CSS的写法开发，
+    在IDE例如Webstorm，VScode需要加装插件才能给于提示。
+  
+  -4 其他相关学习资料     
+  
+  。  [React-Native 样式指南](https://github.com/doyoe/react-native-stylesheet-guide)   
+  
+  。  [React 必备基础知识](http://www.imooc.com/article/279228)    
+  
+  。  [React 中文介绍](https://react.docschina.org/docs/introducing-jsx.html)
+  
+  。  [ES6 使用介绍](http://es6.ruanyifeng.com/)
+    
+          
      
-     
-     
-     
+        
      
     
     
